@@ -25,11 +25,11 @@ async def get_messages(client: Bot, chat_id: int, min_message_id: int, max_messa
                         messages_to_delete
                     )
                     messages_to_delete = []
-            # i don't know if there's a better way to delete messages
-            if len(messages_to_delete) > 0:
-                await mass_delete_messages(
-                    client,
-                    chat_id,
-                    messages_to_delete
-                )
-                messages_to_delete = []
+        # I don't know if there's a better way to delete messages
+        if len(messages_to_delete) > 0:
+            await mass_delete_messages(
+                client,
+                chat_id,
+                messages_to_delete
+            )
+            messages_to_delete = []
