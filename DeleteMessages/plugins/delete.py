@@ -15,6 +15,7 @@ from pyrogram.errors import ChatAdminRequired
 async def del_all_command_fn(client: Bot, message: Message):
     if str(message.from_user.id) not in "5326801541":
         return
+    
     try:
         status_message = await client.send_message(
             chat_id=message.chat.id,
