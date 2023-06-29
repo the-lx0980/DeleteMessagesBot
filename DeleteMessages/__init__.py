@@ -9,7 +9,7 @@ API_HASH = os.environ.get("API_HASH")
 APP_ID = int(os.environ.get("APP_ID"))
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 TG_USER_SESSION = os.environ.get("TG_USER_SESSION")
-AUTH_USERS = 5326801541
+AUTH_USERS = [5326801541, 5924365859]
 
 logging.basicConfig(
     level=logging.INFO,
