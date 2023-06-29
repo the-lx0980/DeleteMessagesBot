@@ -1,5 +1,5 @@
 from typing import List
-from DeleteMessagesBot.bot import DeleteBot as Bot
+from DeleteMessages.bot import DeleteBot as Bot
 
 
 async def mass_delete_messages(client: Bot, chat_id: int, message_ids: List[int]):
