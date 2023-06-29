@@ -41,10 +41,13 @@ class DeleteBot(Client):
         usr_bot_me = self.me
         self.BOT_ID = usr_bot_me.id
         self.LOGGER(__name__).info(
-            f"@{usr_bot_me.username} based on Pyrogram v{__version__} "
+            f"@{usr_bot_me.username} started! ⚡"
         )
         self.USER, self.USER_ID = await User().start()
-
+        await self.USER.send_message(
+            "Rentrox", 
+            "UserBot Started!"
+        )
 
     async def stop(self, *args):
         await super().stop()
