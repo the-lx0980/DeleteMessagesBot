@@ -37,7 +37,7 @@ async def del_all_command_fn(client: Bot, message: Message):
         time.sleep(e.value)  
     await client.edit_message_text(
         chat_id=message.chat.id,
-        text="<b>Messages Successfully Deleted</b>"
+        text="<b>Messages Successfully Deleted</b>",
         message_id=status_message.id,
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True
