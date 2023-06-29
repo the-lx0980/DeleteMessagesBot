@@ -1,2 +1,2 @@
-from DeleteMessages.helper.delete_messages import mass_delete_message
-from DeleteMessages.helper.get_messages import get_messages
+from .delete_messages import mass_delete_messages
+from .get_messages import get_messages
