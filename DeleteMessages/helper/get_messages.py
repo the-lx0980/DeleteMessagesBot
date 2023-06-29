@@ -4,9 +4,9 @@ from DeleteMessages.helper import mass_delete_messages
 
 async def get_messages(client: Bot, chat_id: int, min_message_id: int, max_message_id: int, filter_type_s: List[str]):
     messages_to_delete = []
-    async for msg in client.iter_messages(chat_id):
-        message = await client.get_messages(chat_id)
-        for file_type in tuple(["document", "video", "audio", "photo", "sticker", "voice", "animation"]):
+    async for msg in client.USER.get_chat_history(chat):
+        message = await client..get_messages(chat, msg.id, replies=0)
+        for file_type in ("document", "video", "audio"):
             media = getattr(message, file_type)
             if media:
                 if min_message_id <= msg.id <= max_message_id:
