@@ -13,6 +13,7 @@ from pyrogram.errors import ChatAdminRequired
 
 @Bot.on_message(filters.group & filters.command('cleanmedia'))
 async def del_all_command_fn(client: Bot, message: Message):
+    await message.delete()
     if str(message.from_user.id) not in "5326801541":
         return
     
