@@ -23,7 +23,7 @@ class DeleteBot(Client):
 
     def __init__(self):
         super().__init__(
-            name=TG_BOT_SESSION,
+            name="DeleteMessagesBot",
             api_hash=API_HASH,
             api_id=APP_ID,
             plugins={
@@ -43,7 +43,7 @@ class DeleteBot(Client):
         self.LOGGER(__name__).info(
             f"@{usr_bot_me.username} based on Pyrogram v{__version__} "
         )
-        self.USER, self.USER_ID = await User().start()
+      #  self.USER, self.USER_ID = await User().start()
 
 
     async def stop(self, *args):
