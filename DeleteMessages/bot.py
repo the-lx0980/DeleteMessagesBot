@@ -10,8 +10,7 @@ from . import (
     API_HASH,
     APP_ID,
     LOGGER,
-    TG_BOT_SESSION,
-    TG_BOT_TOKEN,
+    TG_BOT_TOKEN
 )
 
 from .user import User
