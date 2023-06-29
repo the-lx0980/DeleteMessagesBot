@@ -3,7 +3,7 @@
 import os
 import time
 
-from DeleteMessages.bot import DeleteBot,
+from DeleteMessages.bot import DeleteBot as Bot
 from DeleteMessages import AUTH_USERS
 from pyrogram import filters, enums
 from pyrogram.types import Message
@@ -11,7 +11,7 @@ from pyrogram.errors import FloodWait
 from DeleteMessages.helper import get_messages
 from pyrogram.errors import ChatAdminRequired
 
-@DeleteBot.on_message(filters.group & filters.command('cleanmedia'))
+@Bot.on_message(filters.group & filters.command('cleanmedia'))
 async def del_all_command_fn(client: Bot, message: Message):
     await message.delete()
     if message.from_user.id not in AUTH_USERS:
