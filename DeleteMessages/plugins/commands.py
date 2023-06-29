@@ -10,4 +10,5 @@ async def help_me(client, message):
         text=ChatMSG.START_TXT.format(message.from_user.first_name),
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True
+    )
     
